@@ -1,0 +1,39 @@
+.projectItem {
+  display: flex;
+  width: 100%;
+  border-color: grey;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 64px 36px 64px;
+  border-top: 1px solid rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.projectItem:last-of-type {
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.projectItem:hover {
+  opacity: 0.5;
+}
+
+.projectItem:hover h2 {
+  transform: translateX(-10px);
+}
+
+.projectItem:hover p {
+  transform: translateX(10px);
+}
+
+.projectItem h2 {
+  font-size: 60px;
+  margin: 0px;
+  font-weight: 400;
+  transition: all 0.4s;
+}
+
+.projectItem p {
+  transition: all 0.4s;
+  font-weight: 300;
+}

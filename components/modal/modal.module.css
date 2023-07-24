@@ -1,0 +1,48 @@
+.modalContainer {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  background-color: black;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalSlider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  height: auto;
+}
+
+.modalCursor {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  pointer-events: none;
+  background-color: rgb(44, 44, 218);
+  color: white;
+  z-index: 2;
+}
+
+.modalCursor p {
+  font-weight: 600;
+}
