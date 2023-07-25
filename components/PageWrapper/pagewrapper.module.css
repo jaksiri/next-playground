@@ -1,3 +1,5 @@
 .pagewrapper {
+  box-sizing: border-box;
+  margin-top: 60px;
   width: 100%;
 }

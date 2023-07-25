@@ -8,7 +8,22 @@ import { motion } from "framer-motion";
 
 function Nav() {
   const currentPath = usePathname();
-  let opacity = 0.01;
+  const [opacity, setOpacity] = useState(0.01);
+  const scrollYBeforeFullOpacityNav = 24034;
+
+  function handleScroll() {
+    if (window.scrollY <= scrollYBeforeFullOpacityNav) {
+      setOpacity((0.99 / scrollYBeforeFullOpacityNav) * window.scrollY + 0.01);
+    } else {
+      return;
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   const paths = [
     {
@@ -24,7 +39,7 @@ function Nav() {
   return (
     <nav
       className={styles.nav}
-      style={{ backgroundColor: `rgba(0,0,0,${opacity})` }}
+      style={{ backgroundColor: `rgba(18 ,18 ,18 ,${opacity})` }}
     >
       <Link href="/">
         <Image src="/images/logo.png" width={24} height={24} alt="logo" />
