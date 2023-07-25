@@ -1,0 +1,35 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.01);
+  z-index: 10;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.link {
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  display: block;
+  height: 1px;
+  background-color: white;
+}
